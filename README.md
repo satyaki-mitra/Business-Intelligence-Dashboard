@@ -1,5 +1,7 @@
 # 📊 Sales Performance & Business Intelligence Dashboard
 
+[![View in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://business-intelligence-dashboard-gqpvyza7s4pu2td4sm6hck.streamlit.app/)
+
 ## 🚀 Project Overview
 This interactive, enterprise-grade **Sales Performance Dashboard** provides end-to-end analytics for a specialty product company operating across multi-country markets. Built with **Python** and **Streamlit**, it delivers:
 
