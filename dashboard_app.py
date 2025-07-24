@@ -109,7 +109,7 @@ if uploaded_file:
         data_completeness = data_quality.validate_data_completeness()
         data_profiling    = data_quality.generate_data_profiling_summary()
 
-        with st.expander(label = "📋 Data Quality Report", expanded = False):
+        with st.expander(label = "📋 Data Quality Report", expanded = True):
             
             # Basic Metrics Section
             st.subheader(body = "📊 Dataset Overview")
@@ -389,7 +389,7 @@ if uploaded_file:
 
 
         # EXPLORATORY DATA ANALYSIS
-        with st.expander(label = "🔍 Exploratory Data Analysis Report", expanded = False):
+        with st.expander(label = "🔍 Exploratory Data Analysis Report", expanded = True):
             st.markdown("---")
             st.header("📊 Interactive Sales Analytics")
     
@@ -625,7 +625,7 @@ if uploaded_file:
         market_summary = MarketSegmentationSummary(dataframe = sales_data)
         market_metrics = market_summary.calculate_market_metrics()
             
-        with st.expander(label = "📊 Market Segmentation Results", expanded = False):
+        with st.expander(label = "📊 Market Segmentation Results", expanded = True):
             st.markdown(body = "#### 📊 Market Summary Table")
                 
             st.dataframe(data                = market_metrics["market_table"].set_index('Country').T.style.background_gradient(cmap = "Greens"),
@@ -694,7 +694,7 @@ if uploaded_file:
                             use_container_width = True,
                            )
             
-        with st.expander(label = "⏳ Time Series & Forecasting", expanded = False):
+        with st.expander(label = "⏳ Time Series & Forecasting", expanded = True):
             st.subheader(body = "📈 Revenue Forecasting Options")
         
             model_options  = ["ARIMA", 
@@ -769,7 +769,7 @@ if uploaded_file:
                             use_container_width = True,
                            )
 
-        with st.expander("📈 Statistical Testing (Normality, ANOVA, Group Differences)", expanded = False):
+        with st.expander("📈 Statistical Testing (Normality, ANOVA, Group Differences)", expanded = True):
             st.subheader(body = "📊 Statistical Test Summary")
         
             # User Inputs
@@ -877,7 +877,7 @@ if uploaded_file:
             st.caption("ℹ️ This interactive statistical testing section dynamically adjusts to your selections and distribution properties")
 
 
-        with st.expander(label = "🤖 Machine Learning Model Comparison", expanded = False):
+        with st.expander(label = "🤖 Machine Learning Model Comparison", expanded = True):
             
             # Machine Learning Data Preparation
             df_ml                = filtered_data.copy()
@@ -1043,7 +1043,7 @@ if uploaded_file:
                 st.warning("⚠️ Please select at least one model")
 
 
-        with st.expander(label = "⚠️ KPIs + Comprehensive Risk Summary", expanded = False):
+        with st.expander(label = "⚠️ KPIs + Comprehensive Risk Summary", expanded = True):
             st.subheader(body = "📊 Key Business KPIs")
         
             # Initialize Evaluator
@@ -1271,7 +1271,7 @@ if uploaded_file:
             
             # Download functionality for detailed analysis
             st.markdown("---")
-            with st.expander("📥 Download Detailed Analysis", expanded=False):
+            with st.expander("📥 Download Detailed Analysis", expanded = True):
                 
                 # Create comprehensive analysis dictionary
                 comprehensive_analysis = {'low_margin_analysis'  : low_margin_analysis,
@@ -1298,7 +1298,7 @@ if uploaded_file:
                                       )
 
 
-        with st.expander(label = "🚨 Business Alerts & Real-Time Risk Dashboard", expanded = False):
+        with st.expander(label = "🚨 Business Alerts & Real-Time Risk Dashboard", expanded = True):
             st.subheader(body = "🚨 Live Business Health Alerts & Risk Overview")
         
             risk_evaluator = BusinessRiskEvaluator(filtered_data)
@@ -1424,7 +1424,7 @@ if uploaded_file:
                            )
 
 
-        with st.expander(label = "📜 Executive Summary & Recommendations", expanded = False):
+        with st.expander(label = "📜 Executive Summary & Recommendations", expanded = True):
             summary_gen = ExecutiveSummaryGenerator(filtered_df = filtered_data)
             
             summary_gen.display_summary()
