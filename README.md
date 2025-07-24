@@ -37,7 +37,7 @@ This interactive, enterprise-grade **Sales Performance Dashboard** provides end-
 │   ├── statistical_tester.py             # Hypothesis testing module (ANOVA, Shapiro, etc.)
 │   └── time_series_analyzer.py           # Forecasting with ARIMA, Holt-Winters, etc.
 │
-├── app.py                                # 📊 Main Streamlit Application Entry Point
+├── dashboard_app.py                      # 📊 Main Streamlit Application Entry Point
 └── requirements.txt                      # Python package dependencies
 ```
 
@@ -101,7 +101,7 @@ source venv/bin/activate  # or venv\Scripts\activate on Windows
 pip install -r requirements.txt
 
 # Run the Streamlit App
-streamlit run app.py
+streamlit run dashboard_app.py
 ```
 
 ## 🎁 Deployment Options
